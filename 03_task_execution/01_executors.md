@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Executor](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/executor/index.html) · [Local Executor](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/executor/local.html)
+
 The official executor docs describe each executor on its own. This page puts the four you are likely to run side by side: what process actually runs your task, what each one needs from your infrastructure, which settings matter, and how to run several at once. It also explains the Airflow 3 workload model, so you can tell from a stuck task whether the problem is in the scheduler, the executor, or the worker. Behavior is taken from the 3.4 source (`airflow-core/src/airflow/executors/`) and from the provider source on `main`. Provider versions are released independently of core, so check the provider version you have installed.
 
 ---

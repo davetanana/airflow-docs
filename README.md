@@ -38,7 +38,7 @@ graph TD
     Phase6["Phase 6: Day-2 Operations, Monitoring, Logging, Troubleshooting"] --> Phase7
     Phase7["Phase 7: Disaster Recovery"]
     Phase8["Phase 8: Developing Airflow Itself"]
-    Phase9["Phase 9: Reference (airflow.cfg, CLI, metrics, templates, REST API, Task SDK)"]
+    Phase9["Phase 9: Reference (airflow.cfg, CLI, metrics, templates, REST API, Task SDK, glossary)"]
 ```
 
 ---
@@ -118,6 +118,7 @@ graph TD
 * **[04_templates_and_macros.md](09_reference/04_templates_and_macros.md)**: every 3.4 template variable with its type and when it exists (`ds`, `ts`, `logical_date` and the data interval only when the run has a logical date, under `StrictUndefined`), callback-only keys, the filters, every macro and its signature, `var`/`conn` accessors, replacements for removed 2.x variables, and `user_defined_macros`/`user_defined_filters`.
 * **[05_rest_api_and_airflowctl.md](09_reference/05_rest_api_and_airflowctl.md)**: the `/api/v2`, `/auth`, `/execution` and `/ui` prefixes, getting a JWT from `POST /auth/token`, curl recipes for trigger, list runs, clear task instances, logs, pools, variables and connections, body traps (`logical_date` required; `dry_run` defaults to true), and `airflowctl` install, `auth login` and its command groups.
 * **[06_task_sdk_quick_reference.md](09_reference/06_task_sdk_quick_reference.md)**: all public names in `airflow.sdk` for 3.4 (Task SDK 1.4.0) grouped by purpose (Dags, operators and hooks, context, assets, timetables, partition mappers, retry policies, deadlines and callbacks), each with a one-line description and the Airflow 2 import it replaces, plus the imports that live outside `airflow.sdk`.
+* **[07_glossary.md](09_reference/07_glossary.md)**: short 3.4 definitions of the terms the guide uses (components, Dag bundles and versions, Dag runs and their dates, `run_id`, map index, try number, assets, aliases, events and watchers, deferral, heartbeat timeouts, pools, Fernet key), with the Airflow 2 name where it changed and a link to the section that explains each one.
 
 The generated pages and the drift checker live in [`tools/`](tools/README.md). Re-run them against an Airflow checkout whenever you move to a new 3.4.x release.
 
@@ -127,7 +128,7 @@ The generated pages and the drift checker live in [`tools/`](tools/README.md). R
 
 | If your role is... | Start here | Then read |
 | :--- | :--- | :--- |
-| **New to Airflow** | [01_quickstart.md](00_getting_started/01_quickstart.md) | [02_tutorial_dag_authoring.md](00_getting_started/02_tutorial_dag_authoring.md) → [01_mental_model.md](01_architecture_and_mental_model/01_mental_model.md) → [02_anti_patterns.md](01_architecture_and_mental_model/02_anti_patterns.md) → [01_dag_design_patterns.md](02_dag_authoring/01_dag_design_patterns.md) |
+| **New to Airflow** | [01_quickstart.md](00_getting_started/01_quickstart.md) | [02_tutorial_dag_authoring.md](00_getting_started/02_tutorial_dag_authoring.md) → [01_mental_model.md](01_architecture_and_mental_model/01_mental_model.md) → [02_anti_patterns.md](01_architecture_and_mental_model/02_anti_patterns.md) → [01_dag_design_patterns.md](02_dag_authoring/01_dag_design_patterns.md) → [07_glossary.md](09_reference/07_glossary.md) |
 | **Dag author / data engineer** | [01_mental_model.md](01_architecture_and_mental_model/01_mental_model.md) | [01_dag_design_patterns.md](02_dag_authoring/01_dag_design_patterns.md) → [02_scheduling_timetables_and_assets.md](02_dag_authoring/02_scheduling_timetables_and_assets.md) → [03_testing_dags.md](02_dag_authoring/03_testing_dags.md) → [04_xcom_variables_and_connections.md](03_task_execution/04_xcom_variables_and_connections.md) → [04_templates_and_macros.md](09_reference/04_templates_and_macros.md) |
 | **Platform / DevOps engineer** | [01_installation_and_python.md](04_infrastructure_and_cloud/01_installation_and_python.md) | [03_kubernetes_and_helm_chart.md](04_infrastructure_and_cloud/03_kubernetes_and_helm_chart.md) → [01_executors.md](03_task_execution/01_executors.md) → [01_configuration_and_tuning.md](05_deployment_and_config/01_configuration_and_tuning.md) → [02_deployment_runbook.md](05_deployment_and_config/02_deployment_runbook.md) → [03_security_hardening.md](05_deployment_and_config/03_security_hardening.md) → [05_capacity_planning.md](05_deployment_and_config/05_capacity_planning.md) |
 | **On-call SRE** | [03_tutorial_operations.md](00_getting_started/03_tutorial_operations.md) | [05_troubleshooting_playbook.md](06_operations_and_housekeeping/05_troubleshooting_playbook.md) → [03_concurrency_pools_and_priority.md](03_task_execution/03_concurrency_pools_and_priority.md) → [01_cli_operations_guide.md](06_operations_and_housekeeping/01_cli_operations_guide.md) → [03_monitoring_and_observability.md](06_operations_and_housekeeping/03_monitoring_and_observability.md) → [01_backup_and_disaster_recovery.md](07_disaster_recovery/01_backup_and_disaster_recovery.md) |

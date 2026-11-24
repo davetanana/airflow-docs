@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Dags](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/dags.html) · [TaskFlow](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/taskflow.html) · [Mapped tasks](https://airflow.apache.org/docs/apache-airflow/3.4.0/authoring-and-scheduling/dynamic-task-mapping.html) · [Setup and Teardown](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/setup-and-teardown.html)
+
 The official docs explain each authoring feature separately. This page is the opinionated version: which style to pick, how to make tasks safe to rerun, how to set retries and timeouts, and which building blocks (trigger rules, branching, task groups, setup/teardown, mapping, params, callbacks) solve which problem, ending with skeletons for an ETL and an ML pipeline. All examples import from `airflow.sdk` and were checked against the 3.4 Task SDK (`task-sdk/src/airflow/sdk/`). Operators such as `BashOperator` come from the standard provider, which core 3.4 installs as a dependency; provider versions are independent of core.
 
 ---

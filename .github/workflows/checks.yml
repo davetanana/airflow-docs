@@ -1,0 +1,48 @@
+# Static checks for the guide: links and anchors, llms.txt, and drift against the Airflow 3.4 source.
+# The weekly run catches drift when v3-4-stable moves (a new 3.4.x release) even if the guide did not change.
+name: checks
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: python3 -m pip install pyyaml
+
+      - name: Links, anchors and caution notices
+        run: python3 tools/check_links.py
+
+      - name: llms.txt matches the README table of contents
+        run: python3 tools/build_ai_bundle.py --check
+
+      - name: Fetch the Airflow 3.4 source (core, shared, Task SDK, chart)
+        run: |
+          git clone --quiet --depth 1 --branch v3-4-stable --filter=blob:none --sparse \
+            https://github.com/apache/airflow.git ../airflow-3.4
+          git -C ../airflow-3.4 sparse-checkout set airflow-core shared task-sdk chart
+
+      - name: Fetch provider.yaml files from Airflow main
+        run: |
+          git clone --quiet --depth 1 --filter=blob:none --no-checkout \
+            https://github.com/apache/airflow.git ../airflow-main
+          git -C ../airflow-main sparse-checkout set --no-cone '/providers/**/provider.yaml'
+          git -C ../airflow-main checkout --quiet
+
+      - name: CLI commands, flags and config keys exist in 3.4
+        run: python3 tools/check_docs.py ../airflow-3.4 --providers ../airflow-main/providers

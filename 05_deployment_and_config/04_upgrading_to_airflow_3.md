@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Upgrading to Airflow 3](https://airflow.apache.org/docs/apache-airflow/3.4.0/installation/upgrading_to_airflow3.html) · [Upgrading Airflow® to a newer version](https://airflow.apache.org/docs/apache-airflow/3.4.0/installation/upgrading.html) · [Helm chart: Upgrading the Helm Chart to Airflow 3](https://airflow.apache.org/docs/helm-chart/stable/upgrading-to-airflow-3.html) · [Release Notes](https://airflow.apache.org/docs/apache-airflow/3.4.0/release_notes.html)
+
 This page covers the jump from **Airflow 2.x to 3.4**, and upgrades between 3.x minor versions up to 3.4. The official guide (`airflow-core/docs/installation/upgrading_to_airflow3.rst`) and `RELEASE_NOTES.rst` are the authoritative sources; read the "Significant Changes" of **every release** between your version and the target. What this page adds: the upgrade as a runbook with a point-of-no-return, a table of the breaking changes that actually break Dags and deployments, and the rollback limits taken from the migration code (`airflow-core/src/airflow/utils/db.py`).
 
 ---

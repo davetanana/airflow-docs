@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Installation of Airflow®](https://airflow.apache.org/docs/apache-airflow/3.4.0/installation/index.html) · [Prerequisites](https://airflow.apache.org/docs/apache-airflow/3.4.0/installation/prerequisites.html) · [Dependencies](https://airflow.apache.org/docs/apache-airflow/3.4.0/installation/dependencies.html) · [Supported versions](https://airflow.apache.org/docs/apache-airflow/3.4.0/installation/supported-versions.html)
+
 The official installation chapter (`airflow-core/docs/installation/` in the source, "Installation of Airflow" on the website) lists every supported method. This page is the operator's version: which distributions you actually get in 3.4, why an install without constraints breaks weeks later, how to add providers without moving Airflow itself, and the first-run traps that bite in production. Every version bound below was read from the `pyproject.toml` files of the 3.4.0 source.
 
 If you deploy with containers, read this page for the packaging model and then go to [Docker images](02_docker_images.md).

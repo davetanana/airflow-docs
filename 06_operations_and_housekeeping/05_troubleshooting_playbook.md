@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Troubleshooting](https://airflow.apache.org/docs/apache-airflow/3.4.0/troubleshooting.html) · [FAQ](https://airflow.apache.org/docs/apache-airflow/3.4.0/faq.html)
+
 The official troubleshooting page explains a handful of failure modes. This page is organized by **what you see**. Each entry quotes the **exact text** Airflow 3.4 logs or shows (taken from the `v3-4-stable` source, with the file named), the commands or metrics that confirm the cause, and the fix. `%s` and `<...>` mark values Airflow fills in.
 
 > [!TIP]

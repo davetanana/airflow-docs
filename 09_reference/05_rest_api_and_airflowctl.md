@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Airflow public REST API reference](https://airflow.apache.org/docs/apache-airflow/3.4.0/stable-rest-api-ref.html) · [Public API](https://airflow.apache.org/docs/apache-airflow/3.4.0/security/api.html)
+
 The full REST API reference is the OpenAPI document served by your own API server (`/docs` for Swagger UI when `[api] enable_swagger_ui = True`, `/openapi.json` for the schema). This page is the operator's cheat sheet: how to get a token, the dozen calls you use during operations with `curl` examples that work against 3.4, the request-body traps, and `airflowctl`, the API-based CLI. Paths below were checked against `airflow-core/src/airflow/api_fastapi/core_api/routes/public/` on `v3-4-stable`.
 
 ---

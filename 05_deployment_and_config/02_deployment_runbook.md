@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Production Deployment](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/production-deployment.html) · [Web Stack](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/web-stack.html) · [Dag Bundles](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/dag-bundles.html)
+
 The official docs describe each Airflow component on its own page. This runbook puts them together the way an operator deploys them: which process needs which network paths and secrets, the order to bring things up, how Dag bundles are wired, how to run each component highly available, which health check to use for each one, and a go-live checklist. It assumes Airflow 3.4 on VMs or containers. For Kubernetes with the official chart, read [Kubernetes and the Helm Chart](../04_infrastructure_and_cloud/03_kubernetes_and_helm_chart.md) alongside this page.
 
 ---

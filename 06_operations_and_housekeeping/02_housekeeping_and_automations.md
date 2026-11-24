@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Using the Command Line Interface](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/usage-cli.html) · [Task and Asset State Store Cleanup](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/task-and-asset-state-store-cleanup.html)
+
 Airflow never deletes history on its own. Every Dag run, task try, XCom, audit-log row and Dag version stays in the metadata database until you remove it, and every task attempt leaves a log file behind. This page covers what grows, how `airflow db clean` decides what to delete (from `airflow-core/src/airflow/utils/db_cleanup.py` on `v3-4-stable`), how to schedule it safely now that tasks can no longer reach the database, and the other recurring chores: log retention, stale Dags and bundle versions, expired task state and Fernet key rotation. It ends with alert thresholds that tell you a chore was missed.
 
 ---

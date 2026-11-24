@@ -34,6 +34,10 @@ python3 tools/check_docs.py ../airflow-3.4
 python3 tools/build_ai_bundle.py --check     # if it fails, run it without --check and commit llms.txt
 ```
 
+The same checks run in CI on every push and pull request, and weekly against the current `v3-4-stable` branch to catch drift ([`.github/workflows/checks.yml`](.github/workflows/checks.yml)).
+
+When you add a page, open it with an **Official docs:** line under the caution notice that links the matching pages on airflow.apache.org (core pages under `/docs/apache-airflow/3.4.0/`).
+
 ## Using an AI assistant to contribute
 
 That's fine. Claude Code, Gemini CLI, OpenAI Codex and other tools that read `AGENTS.md` pick up this guide's rules automatically. See [AI_USAGE.md](AI_USAGE.md). You are still responsible for checking the result: AI-written claims must meet the same verification rules as any other change.

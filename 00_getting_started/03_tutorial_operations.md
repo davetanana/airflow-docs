@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Using the Command Line Interface](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/usage-cli.html) · [UI Overview](https://airflow.apache.org/docs/apache-airflow/3.4.0/ui.html)
+
 This page is a hands-on drill for whoever runs Airflow: check that every component is alive, break a Dag file and find the error, make a task fail and retry, recover the run two different ways, backfill a date range, and preview a metadata cleanup. Every command and flag was checked against `airflow-core/src/airflow/cli/cli_config.py` on the 3.4 branch. The official docs describe each command in isolation; this page puts them in the order you'll need them during an incident, with the traps that bite.
 
 Prerequisites: `airflow standalone` running from the [quickstart](01_quickstart.md), a second terminal with the same `AIRFLOW_HOME` exported, and `curl` and `jq`.

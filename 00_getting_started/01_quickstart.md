@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Quick Start](https://airflow.apache.org/docs/apache-airflow/3.4.0/start.html) · [Installation from PyPI](https://airflow.apache.org/docs/apache-airflow/3.4.0/installation/installing-from-pypi.html) · [Running Airflow in Docker](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/docker-compose/index.html)
+
 This page takes you from nothing to a running Airflow 3.4 on your laptop, a first Dag written with the Task SDK, a manual run, its logs, and a local test. The official "Quick Start" gets you to the login screen. This page goes further: it says what `airflow standalone` actually starts and overrides, why a new Dag file can take minutes to appear, and which 2.x habits break on 3.4. Each step links to the page that explains it in depth.
 
 > [!WARNING]

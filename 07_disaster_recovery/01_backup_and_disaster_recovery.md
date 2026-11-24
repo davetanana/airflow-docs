@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Set up a Database Backend](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/set-up-database.html) · [Fernet](https://airflow.apache.org/docs/apache-airflow/3.4.0/security/secrets/fernet.html)
+
 The official docs have no single disaster-recovery chapter; the pieces are spread across the database setup, Fernet key and upgrade pages. This runbook puts them together for Airflow 3.4: an inventory of every piece of state and where it lives, how to back each one up, why the Fernet key matters more than the database dump, how schema versions constrain a restore, how to recover from a failed migration, and how a 3.4 scheduler heals task instances that were running when a scheduler or the whole deployment died. Rehearse every procedure on a non-production deployment before you need it.
 
 ---

@@ -4,7 +4,7 @@ Where this guide stands against the official Apache Airflow 3.4 documentation, a
 
 ## 1. How the guide compares with the official docs
 
-The official docs source on the `v3-4-stable` branch (`airflow-core/docs`, 159 reStructuredText pages, about 250,000 words, checked November 2026) is the parameter-by-parameter and concept reference. This guide aims to complement it, not replace it: it should link to the official pages for theory and full API detail, and own the operational "how do I do this safely" material.
+The official docs source on the `v3-4-stable` branch (`airflow-core/docs`, 159 reStructuredText pages, about 250,000 words, checked November 2026) is the parameter-by-parameter and concept reference. This guide aims to complement it, not replace it: it links to the official pages for theory and full API detail (every page opens with an **Official docs** line pointing at the matching 3.4.0 pages), and owns the operational "how do I do this safely" material.
 
 | Area | Official 3.4 docs | This guide |
 | :--- | :--- | :--- |
@@ -23,7 +23,6 @@ The official docs source on the `v3-4-stable` branch (`airflow-core/docs`, 159 r
 3. **Plugins, listeners and cluster policies** as operational tools (enforcing owners, tags, pools or queues across all Dags).
 4. **Managed services.** Notes on what changes on hosted Airflow offerings, kept vendor-neutral.
 5. **A provider defaults page** for the Celery and Kubernetes executors, generated from each provider's `provider.yaml`, like the core config reference.
-6. **Glossary.** Dag run, task instance, logical date, data interval, run_after, asset event, bundle, Dag version, workload, triggerer, deferral.
 
 ## 3. Project health
 

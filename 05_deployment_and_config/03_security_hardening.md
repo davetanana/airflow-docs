@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Airflow Security Model](https://airflow.apache.org/docs/apache-airflow/3.4.0/security/security_model.html) · [Fernet](https://airflow.apache.org/docs/apache-airflow/3.4.0/security/secrets/fernet.html) · [JWT Token Authentication](https://airflow.apache.org/docs/apache-airflow/3.4.0/security/jwt_token_authentication.html) · [Auth manager](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/auth-manager/index.html)
+
 Airflow's security model (`airflow-core/docs/security/security_model.rst`) and its JWT document (`jwt_token_authentication.rst`) are long and precise. This page turns them into an operator's checklist for 3.4: which keys to set, which auth manager to run, how the two token systems behave, and what Airflow does **not** protect against. Throughout, claims are sorted the way the security model sorts them:
 
 * **Guarantee**: Airflow enforces it in code.

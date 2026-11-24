@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Pools](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/pools.html) · [Priority Weights](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/priority-weight.html) · [Scheduler](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/scheduler.html)
+
 The official docs describe each concurrency setting where it is defined, scattered across the config reference, the Dag and operator API docs, and the pools page. This page lists every knob **in the order the scheduler checks them**, with its 3.4 default, the exact log line the scheduler writes when the knob blocks a task, and a decision flow for the question everyone asks: "why is my task not running?" Everything here comes from `_critical_section_enqueue_task_instances`, `_select_task_instances_to_queue` and `_task_concurrency_allows_execution` in `airflow-core/src/airflow/jobs/scheduler_job_runner.py` on `v3-4-stable`. In 3.4 they replace the older `_executable_task_instances_to_queued`.
 
 ---

@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Using the Command Line Interface](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/usage-cli.html) · [Command Line Interface and Environment Variables Reference](https://airflow.apache.org/docs/apache-airflow/3.4.0/cli-and-env-variables-ref.html)
+
 The official CLI reference lists every command alphabetically. This page groups the commands an operator actually uses by **task**: is it alive, why is this Dag missing, rerun these tasks, move pools and variables between environments, clean the database. It also says which commands touch the metadata database directly and which need the Dag files, because in Airflow 3 that decides *where* you can run them. Every command and flag here was checked against `airflow-core/src/airflow/cli/cli_config.py` on the `v3-4-stable` branch. The full flag list is in the [CLI reference](../09_reference/02_cli_reference.md).
 
 ---

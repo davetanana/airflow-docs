@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Performance tuning](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/performance.html) · [Scheduler](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/scheduler.html)
+
 The official docs explain each tuning option on its own. This page connects them into sizing arithmetic for Airflow 3.4: how many task slots you really have, whether the Dag processor keeps up, how many database connections the deployment opens, and how big the triggerer and API server tier must be. It ends with a worked example.
 
 > [!IMPORTANT]
