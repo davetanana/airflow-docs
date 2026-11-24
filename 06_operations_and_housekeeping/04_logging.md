@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Logging and Monitoring architecture](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/logging-monitoring/logging-architecture.html) · [Logging for Tasks](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/logging-monitoring/logging-tasks.html) · [Advanced logging configuration](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/logging-monitoring/advanced-logging-configuration.html)
+
 Airflow 3 changed who writes and who reads task logs. A task's log is written by the Task SDK **supervisor on the worker**, uploaded by that supervisor if remote logging is on, and read back by the **API server** when someone opens it in the UI. Most "log not found" tickets come from one of those three hops missing a piece of configuration. This page traces the path through the 3.4 source (`task-sdk/src/airflow/sdk/log.py`, `task-sdk/src/airflow/sdk/execution_time/supervisor.py`, `airflow-core/src/airflow/utils/log/file_task_handler.py`, `airflow-core/src/airflow/config_templates/airflow_local_settings.py`), then covers remote logging, structured logs, log levels, custom logging config and secret masking, and ends with the exact "log not found" messages and their fixes.
 
 ---

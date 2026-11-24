@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Installing from Sources](https://airflow.apache.org/docs/apache-airflow/3.4.0/installation/installing-from-sources.html)
+
 This page is for people who change Airflow itself: core, the Task SDK, a provider, the Helm chart, or the docs. The official contributor documentation lives in `contributing-docs/` and `dev/breeze/doc/` and is long and complete. This page is the short, opinionated path through it: which environment to use for which job, the exact commands, and the mistakes that cost contributors the most time. It also explains how this field guide relates to the official docs, and how to check the guide itself.
 
 Paths on this page are relative to the root of an `apache/airflow` checkout. Commands were taken from the repository's `AGENTS.md`/`CLAUDE.md`, `contributing-docs/` and `dev/breeze/` on the `main` branch; check them against the branch you work on.

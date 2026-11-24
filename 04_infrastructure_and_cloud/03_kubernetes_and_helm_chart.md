@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Kubernetes](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/kubernetes.html) · [Helm chart: Helm Chart for Apache Airflow](https://airflow.apache.org/docs/helm-chart/stable/index.html) · [Helm chart: Production Guide](https://airflow.apache.org/docs/helm-chart/stable/production-guide.html) · [Helm chart: Parameters reference](https://airflow.apache.org/docs/helm-chart/stable/parameters-ref.html)
+
 The chart's own documentation (`chart/docs/` in the source, "Helm Chart for Apache Airflow" on the website) explains each value. This page adds what operators learn the hard way: which defaults are development-only, which secrets the chart **regenerates on every upgrade**, how Dag delivery choices interact with Dag versioning, how to size PgBouncer, and a production `values.yaml` to start from.
 
 Version scope. In the `v3-4-stable` source the chart is `version: 2.0.0` in `chart/Chart.yaml`, with `appVersion` and `defaultAirflowTag` still at **3.3.2**; the main branch bumps the default image to 3.4.0. So set `images.airflow.tag` (or your own image) and `airflowVersion: "3.4.0"` explicitly. The `chart/RELEASE_NOTES.rst` in that tree ends at 1.21.0; the 2.0.0 changes below come from the `chart/newsfragments/*.significant.rst` files and were checked against the 3.4 `values.yaml`.

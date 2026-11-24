@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Best Practices](https://airflow.apache.org/docs/apache-airflow/3.4.0/best-practices.html) · [Debugging Airflow Dags](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/debug.html)
+
 The official docs show a few test snippets. This page is a complete test strategy for Airflow 3.4 Dags: which layer catches which bug, the 3.4-correct way to write each test (several Airflow 2 recipes no longer work: `DagBag(include_examples=False)`, `ti.run()`, tasks that query the ORM), what each CLI test command needs from the metadata database, and a CI recipe. Behavior was checked in `airflow-core/src/airflow/dag_processing/dagbag.py`, `task-sdk/src/airflow/sdk/definitions/dag.py` (`DAG.test`) and `airflow-core/src/airflow/cli/commands/` on `v3-4-stable`.
 
 ---

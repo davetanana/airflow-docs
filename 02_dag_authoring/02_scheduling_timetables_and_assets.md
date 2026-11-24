@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Timetables](https://airflow.apache.org/docs/apache-airflow/3.4.0/authoring-and-scheduling/timetable.html) · [Asset Definitions](https://airflow.apache.org/docs/apache-airflow/3.4.0/authoring-and-scheduling/assets.html) · [Asset-Aware Scheduling](https://airflow.apache.org/docs/apache-airflow/3.4.0/authoring-and-scheduling/asset-scheduling.html) · [Event-driven scheduling](https://airflow.apache.org/docs/apache-airflow/3.4.0/authoring-and-scheduling/event-scheduling.html) · [Backfill](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/backfill.html)
+
 Scheduling is where Airflow 2 knowledge does the most damage in Airflow 3: a cron string means something different, catchup is off, asset events no longer batch by default, and backfills are run by the scheduler. This page gives the 3.4 rules in one place, with the config keys that change them, then covers assets, event-driven scheduling with watchers, and partitioned Dags. Everything was checked against `task-sdk/src/airflow/sdk/definitions/` and `config.yml` on `v3-4-stable`. For what the dates on a run mean, read [the mental model, §6](../01_architecture_and_mental_model/01_mental_model.md#6-dates-on-a-dag-run-logical_date-data-interval-run_after) first.
 
 ---

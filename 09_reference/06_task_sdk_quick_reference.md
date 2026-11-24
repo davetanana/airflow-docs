@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Task SDK: Apache Airflow Task SDK](https://airflow.apache.org/docs/task-sdk/stable/index.html) · [Task SDK: airflow.sdk API Reference](https://airflow.apache.org/docs/task-sdk/stable/api.html) · [Public Interface for Airflow 3.0+](https://airflow.apache.org/docs/apache-airflow/3.4.0/public-airflow-interface.html)
+
 The official API reference lists the Task SDK alphabetically, one class per page. This page puts **every public name** in `airflow.sdk.__all__` for Airflow 3.4 (Task SDK `__version__` `1.4.0`, file `task-sdk/src/airflow/sdk/__init__.py` on `v3-4-stable`) on one page, grouped by what you use it for. Each entry has a one-line description and, where there is one, the Airflow 2 import it replaces. Use it to port Dags, and to check whether a name you have seen elsewhere really is public.
 
 How to read the "Airflow 2 path" column:

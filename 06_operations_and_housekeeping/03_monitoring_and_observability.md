@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Metrics Configuration](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/logging-monitoring/metrics.html) · [Checking Airflow Health Status](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/logging-monitoring/check-health.html) · [Traces Configuration](https://airflow.apache.org/docs/apache-airflow/3.4.0/administration-and-deployment/logging-monitoring/traces.html)
+
 Airflow emits well over a hundred metrics. This page picks the ones worth an alert, says what threshold to start with, and covers the pieces around them: which metrics backend wins when several are enabled, why your per-Dag tags may silently disappear, the health endpoints for each component, OpenTelemetry tracing, and deadline alerts, the Airflow 3 replacement for SLAs. Metric names are from `shared/observability/src/airflow_shared/observability/metrics/metrics_template.yaml` on `v3-4-stable`; every metric is listed in the [metrics reference](../09_reference/03_metrics_reference.md).
 
 ---

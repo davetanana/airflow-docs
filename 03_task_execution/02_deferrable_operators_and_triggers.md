@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Deferrable Operators & Triggers](https://airflow.apache.org/docs/apache-airflow/3.4.0/authoring-and-scheduling/deferring.html) · [Task SDK: Deferred vs Async Operators](https://airflow.apache.org/docs/task-sdk/stable/deferred-vs-async-operators.html)
+
 The official docs explain the deferral concept and show the API. This page is for people who write and run deferrable tasks in production. It covers the exact 3.4 call sequence, a trigger template that holds up when the triggerer restarts, how deferral interacts with timeouts, pools and concurrency, how to size and run the triggerer in HA, and what the warnings in its log mean. Core behavior is from `airflow-core/src/airflow/triggers/base.py`, `airflow-core/src/airflow/jobs/triggerer_job_runner.py`, `airflow-core/src/airflow/models/trigger.py` and `task-sdk/src/airflow/sdk/bases/operator.py` on `v3-4-stable`.
 
 ---

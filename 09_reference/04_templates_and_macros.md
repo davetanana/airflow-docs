@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Templates reference](https://airflow.apache.org/docs/apache-airflow/3.4.0/templates-ref.html)
+
 This page lists every Jinja template variable, filter and macro a task sees in Airflow 3.4, with its type, when it is present, and an example. It was built from the code that fills the context, not from the docs: `RuntimeTaskInstance.get_template_context()` in `task-sdk/src/airflow/sdk/execution_time/task_runner.py`, the `Context` type in `task-sdk/src/airflow/sdk/definitions/context.py`, `task-sdk/src/airflow/sdk/execution_time/macros.py`, and the filters in `task-sdk/src/airflow/sdk/definitions/_internal/templater.py`. What it adds over the official templates reference: which keys are **conditional** and fail your template when absent, which documented keys are never actually set, and a replacement for every variable removed since 2.x.
 
 ---

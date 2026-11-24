@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Set up a Database Backend](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/set-up-database.html) · [Database ERD Reference](https://airflow.apache.org/docs/apache-airflow/3.4.0/database-erd-ref.html) · [Database Migrations Reference](https://airflow.apache.org/docs/apache-airflow/3.4.0/migrations-ref.html)
+
 The metadata database holds every Dag run, task try, serialized Dag, connection, variable and audit event. When it is slow, the whole deployment is slow; when it is lost, so is the deployment's history and most of its configuration. The official "Set up a Database Backend" how-to covers creating the database and the URL format. This page adds what you need to run it: which component opens how many connections, PgBouncer, the 3.4 driver change, how migrations behave and fail, and which tables grow without bound in 3.4 (several of them were renamed or merged in 3.4).
 
 Sources: `airflow-core/src/airflow/settings.py` (engine and pool), `configuration.py` (URL rewriting), `utils/db.py` (migrations), `utils/db_cleanup.py`, the migration files in `airflow-core/src/airflow/migrations/versions/`, and `[database]` in `config.yml`.

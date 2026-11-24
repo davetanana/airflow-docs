@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Docker image: Docker Image for Apache Airflow](https://airflow.apache.org/docs/docker-stack/index.html) · [Docker image: Building the image](https://airflow.apache.org/docs/docker-stack/build.html) · [Running Airflow in Docker](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/docker-compose/index.html)
+
 The official "Docker Image for Apache Airflow" docs (`docker-stack-docs/` in the source) describe every build argument. This page covers the decisions an operator actually has to make: which published image to start from, when to extend and when to customize, how to add packages without silently moving Airflow, what the entrypoint does on its own (including one behavior that hides failed migrations), and how to pin tags so a rebuild is reproducible.
 
 Sources: the `Dockerfile` and its embedded entrypoint script (`entrypoint_prod.sh`, copied to `/entrypoint` in the image) as found in the repository with `ARG AIRFLOW_VERSION="3.4.0"`, and `docker-stack-docs/`. The Dockerfile is not versioned with SemVer, so check the image changelog (`docker-stack-docs/changelog.rst`) when you move to a new Airflow patch release.

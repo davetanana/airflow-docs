@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Airflow 101: Building Your First Workflow](https://airflow.apache.org/docs/apache-airflow/3.4.0/tutorial/fundamentals.html) · [Pythonic Dags with the TaskFlow API](https://airflow.apache.org/docs/apache-airflow/3.4.0/tutorial/taskflow.html) · [Building a Simple Data Pipeline](https://airflow.apache.org/docs/apache-airflow/3.4.0/tutorial/pipeline.html)
+
 The official tutorials show each feature on its own. This page builds one small, realistic pipeline in eight steps, and each step names the **trap it avoids**: the mistake that works on a laptop and fails in production. At the end you have two Dags. `orders_daily` extracts orders, enriches each one in a dynamically mapped task, and publishes a summary as an Asset. `orders_report` runs whenever that Asset is updated. You test both locally with `dag.test()`.
 
 Prerequisites: a running local Airflow 3.4 from the [quickstart](01_quickstart.md), with `AIRFLOW_HOME` exported in your terminal.

@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Best Practices](https://airflow.apache.org/docs/apache-airflow/3.4.0/best-practices.html) · [FAQ](https://airflow.apache.org/docs/apache-airflow/3.4.0/faq.html)
+
 The official "best practices" page lists recommendations. This page lists the mistakes that actually cause slow parsing, stuck schedulers, surprise reruns and lost history in Airflow 3.4, each with **why it hurts**, **how to spot it**, and **the fix**. Config keys and defaults are taken from `config.yml` on `v3-4-stable`; behavior claims cite the source file. Read the [mental model](01_mental_model.md) first if the terms "Dag processor", "Dag version" or "Execution API" are new.
 
 ---

@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Setting Configuration Options](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/set-config.html) · [Configuration Reference](https://airflow.apache.org/docs/apache-airflow/3.4.0/configurations-ref.html) · [Performance tuning](https://airflow.apache.org/docs/apache-airflow/3.4.0/howto/performance.html)
+
 The official configuration reference lists every option. This page adds three things it does not give you in one place: how Airflow 3.4 actually **resolves** a value (taken from the shared configuration parser, not from the prose docs), the **traps** in the CLI and in auto-generated secrets, and a short list of the keys that matter in production, grouped by component, with their 3.4 defaults from `config.yml`. For every key and default, the generated [airflow.cfg reference](../09_reference/01_airflow_cfg_reference.md) is the arbiter.
 
 ---

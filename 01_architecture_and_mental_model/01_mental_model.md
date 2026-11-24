@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [Architecture Overview](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/overview.html) · [Public Interface for Airflow 3.0+](https://airflow.apache.org/docs/apache-airflow/3.4.0/public-airflow-interface.html) · [Workload](https://airflow.apache.org/docs/apache-airflow/3.4.0/security/workload.html)
+
 The official docs describe each component on its own page. This page puts them together as one picture an operator or Dag author can reason with: which process runs your code, which process may touch the metadata database, what a "Dag version" is, how a Dag run and a task instance move through their states, and which dates a run carries. It ends with the Airflow 2 habits that no longer hold. Every state, column and config key here was taken from the 3.4 source (`v3-4-stable`).
 
 ---

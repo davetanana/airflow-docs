@@ -3,6 +3,8 @@
 > [!CAUTION]
 > Commands on this page can change or delete data and affect running deployments. Try them on a test or staging deployment first, and read the [disclaimer](../README.md#disclaimer). The guide is provided "as is", without warranty.
 
+**Official docs:** [XComs](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/xcoms.html) · [Variables](https://airflow.apache.org/docs/apache-airflow/3.4.0/core-concepts/variables.html) · [Connections & Hooks](https://airflow.apache.org/docs/apache-airflow/3.4.0/authoring-and-scheduling/connections.html) · [Secrets Backend](https://airflow.apache.org/docs/apache-airflow/3.4.0/security/secrets/secrets-backend/index.html)
+
 The official docs cover XCom, Variables, Connections and secrets backends on separate pages, and a good part of what circulates online still describes Airflow 2. In Airflow 2, tasks read these objects straight from the metadata database. This page covers how they move in 3.4. A task asks its supervisor, the supervisor asks the API server over the Execution API, and secrets backends are consulted in a specific order **in two different places**. The page also covers size limits, the object-storage XCom backend and its off-by-default threshold, URI and JSON connection formats, masking, and caching. Sources are `task-sdk/src/airflow/sdk/execution_time/context.py`, `task-sdk/src/airflow/sdk/bases/xcom.py`, `task-sdk/src/airflow/sdk/execution_time/supervisor.py`, and `airflow-core/src/airflow/config_templates/config.yml` on `v3-4-stable`.
 
 ---
