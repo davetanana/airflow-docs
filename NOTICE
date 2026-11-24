@@ -1,0 +1,26 @@
+Field Guide for Apache Airflow(R) 3.4
+Copyright 2026 Dave Tanana and contributors
+
+This documentation is independent and is not affiliated with, endorsed by,
+or sponsored by The Apache Software Foundation or the Apache Airflow project.
+
+Portions of this documentation (configuration excerpts, code snippets, and the
+generated reference pages in 09_reference/, which are derived from
+airflow-core/src/airflow/config_templates/config.yml,
+airflow-core/src/airflow/cli/cli_config.py and the metrics registry in
+shared/observability) are taken from or derived from Apache Airflow, which
+carries the following notice:
+
+  Apache Airflow
+  Copyright 2016-2026 The Apache Software Foundation
+
+  This product includes software developed at
+  The Apache Software Foundation (http://www.apache.org/).
+
+Apache Airflow is licensed under the Apache License, Version 2.0.
+Excerpts may have been shortened or reformatted; the generated pages state the
+Airflow version and commit they were generated from.
+
+Apache, Apache Airflow, Airflow, and the Airflow logo are either registered
+trademarks or trademarks of The Apache Software Foundation in the United States
+and/or other countries.

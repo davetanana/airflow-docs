@@ -1,0 +1,12 @@
+# Built AI bundle (tools/build_ai_bundle.py)
+dist/
+# Python
+__pycache__/
+*.pyc
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.claude/settings.local.json
+.env
